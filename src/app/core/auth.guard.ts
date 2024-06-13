@@ -6,7 +6,6 @@ export const AuthGuard = (): boolean => {
   const authService = inject(AuthService);
   const router = inject(Router);
 
-  console.log('canActivate', authService.currentUserSig());
   if (authService.currentUserSig()) {
     return true;
   } else {

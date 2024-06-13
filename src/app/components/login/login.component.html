@@ -4,14 +4,24 @@
 <div>{{ errorMessage }}</div>
 }
 
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<div id="firebaseui-auth-container" class="auth-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div>
       <input type="text" placeholder="Email" formControlName="email" />
     </div>
     <div>
-      <input type="password" placeholder="Password" formControlName="password" />
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
     </div>
     <div>
       <button type="submit">Sign In</button>
     </div>
   </form>
+
+  <div>
+    <button (click)="loginWithGoogle()">Login with google</button>
+  </div>
+</div>

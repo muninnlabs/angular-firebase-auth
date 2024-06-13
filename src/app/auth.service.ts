@@ -16,6 +16,7 @@ import { UserInterface } from './user.interface';
 })
 export class AuthService {
   firebaseAuth = inject(Auth);
+
   user$ = user(this.firebaseAuth);
   currentUserSig = signal<UserInterface | null | undefined>(undefined);
 
